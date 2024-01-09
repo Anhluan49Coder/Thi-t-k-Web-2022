@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="./vendor/Bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/FontAwesome/fontawesome-free-5.8.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="../Trang_Chủ/trangchu.html">Home</a></li>
+                <li><a href="#new">New Product</a></li>
+                <li><a href="#sale">Sale</a></li>
+                <li><a href="#selling-products">Selling Products</a></li>
+                <li><a href="#all-product">All Product</a></li>
+            </ul>
+
+
+            <!-- Nút search -->
+            <input class="search-box" maxlength="18" placeholder="Nhập sản phẩm bạn muốn tìm">
+            <div class="search-btn">
+                <i class="search-icon fas fa-magnifying-glass"></i>
+            </div>
+        </div>
+        
+        </div>
+
+
+    <div>
+        <br>
+        <br>
+        <h1 class="fas fa-shopping-cart">Giỏ Hàng</h1>
+    </div>
+
+
+    
+
+    <form action="" method="post">
+        <table id="giohang">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                    <th>xóa</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="sp">
+                    <td>
+                        <img class="Anhsp" src="./img/baovởgiárẻ.jpg" alt="anh minh hoa">                    
+                        <input type="hidden" name="sp-1" value="1">
+                    </td>
+                    <td class="ten-sp"><b>Bao vở Cute</b></td>
+                    <td class="sl">
+                        <input id="sl" type="number" name="sp-1" value="1" min="0" max="99">
+                    </td>
+                    <td class="gia" data-value="20000"></td>
+                    <td class="tt"></td>
+                    <td><button id="demo" type="button" class="btn btn-danger btn-xoa">Xóa</button></td>
+                </tr>
+                
+            </tbody>
+
+            <tbody>
+            <tr class="sp">
+                <td>
+                    <img class="Anhsp" src="./img/but-chi-got-colleen-2b-6b.jpg" alt="anh minh hoa">
+                    <input type="hidden" name="sp-2" value="2">
+                </td>
+                <td class="ten-sp"><b>Bút Chì Colleen</b></td>
+                <td class="sl">
+                    <input id="sl" type="number" name="sp-2" value="1" min="0" max="99">
+                </td>
+                <td class="gia" data-value="60000"></td>
+                <td class="tt"></td>
+                <td><button type="button" class="btn btn-danger btn-xoa">Xóa</button></td>
+            </tr>
+            
+        </tbody>
+
+        <tbody>
+            <tr class="sp">
+                <td>
+                    <img class="Anhsp" src="./img/hộpbútngườinhện.png" alt="anh minh hoa">
+                    <input type="hidden" name="sp-3" value="3">
+                </td>
+                <td class="ten-sp"><b>Hộp Bút Người Nhện</b></td>
+                <td class="sl">
+                    <input id="sl" type="number" name="sp-1" value="1" min="0" max="99">
+                </td>
+                <td class="gia" data-value="40000"></td>
+                <td class="tt"></td>
+                <td><button type="button" class="btn btn-danger btn-xoa">Xóa</button></td>
+            </tr>
+            
+        </tbody>
+
+        <tbody>
+            <tr class="sp">
+                <td>
+                    <img class="Anhsp" src="./img/đồchuốcconvật.jpg" alt="anh minh hoa">
+                    <input type="hidden" name="sp-4" value="4">
+                </td>
+                <td class="ten-sp"><b>Đồ Chuốc Con Vật</b></td>
+                <td class="sl">
+                    <input id="sl" type="number" name="sp-4" value="1" min="1" max="99">
+                </td>
+                <td class="gia" data-value="10000"></td>
+                <td class="tt"></td>
+                <td><button type="button" class="btn btn-danger btn-xoa">Xóa</button></td>
+            </tr>
+            
+        </tbody>
+
+        <tbody>
+            <tr class="sp">
+                <td>
+                    <img class="Anhsp" src="./img/gommiffy.jpg" alt="anh minh hoa">                  
+                    <input type="hidden" name="sp-13" value="13">
+                </td>
+                <td class="ten-sp"><b>Gom Miffy</b></td>
+                <td class="sl">
+                    <input id="sl" type="number" name="sp-13" value="1" min="0" max="99">
+                </td>
+                <td class="gia" data-value="3000"></td>
+                <td class="tt"></td>
+                <td><button type="button" class="btn btn-danger btn-xoa">Xóa</button></td>
+            </tr>
+        </tbody>
+
+
+            <tfoot>
+                <tr>
+                    <td colspan="2"> <b>Tổng tiền thanh toán:</b></td>
+                    <td id="tong" class="tt"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <div>
+            <br>
+            <br>
+            <label>Địa chỉ:</label>
+            <input type="text">
+            <br>
+            <label>Số điện thoại:</label>
+            <input class="sdt" type="number">
+            <br>
+            <label>Yêu cầu của khách hàng:</label>
+            <input type="text" placeholder="Có hoặc không">
+            <button>Thanh toan</button>
+            <br>
+            <br>
+            <br>
+
+        </div>
+        
+    </form>
+
+
+   
+    <div id="footer">
+        <div class="column1">Chăm sóc khách hàng
+            <ul>
+                <li><a href="">Trung Tâm Trợ Giúp</a></li>
+                <li><a href="">Hướng dẫn mua hàng</a></li>
+                <li><a href="">Hướng dẫn bán hàng</a></li>
+                <li><a href="">Thanh toán</a></li>
+                <li><a href="">Vận chuyển</a></li>
+                <li><a href="">Trả hàng & Hoàn tiền</a></li>
+                <li><a href="">Chăm sóc khách hàng</a></li>
+                <li><a href="">Chính sách bảo hành</a></li>
+            </ul>
+        </div>
+
+        <div class="column2">Về Shop
+            <ul>
+                <li><a href="">Giới thiệu về shop</a></li>
+                <li><a href="">Tuyển dụng</a></li>
+                <li><a href="">Điều khoản của shop</a></li>
+                <li><a href="">Chính sách bảo mật</a></li>
+                <li><a href="">Chính Hãng</a></li>
+            </ul>
+        </div>
+
+        <div class="column3">Cổng thanh toán
+            <ul>
+                <li><img src="./img/ảnhcổngthanhtoán.jpg" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="column4">Theo dõi chúng tôi tại
+            <ul>
+                <li><a href=""><i class="fab fa-facebook"> facebook</i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i> instagram</a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i> linkedin</a></li>
+                <li><a href=""><i class="fab fa-tiktok"></i> tiktok</a></li>
+            </ul>
+        </div>
+    </div>
+    
+              
+        <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+        <script src="./vendor/Bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <script src="./js/cart.js"></script>
+</body>
+
+</html>
